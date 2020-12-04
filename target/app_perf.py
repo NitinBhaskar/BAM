@@ -11,28 +11,10 @@ import time
 import numpy as np
 import math
 
-
-def calculate_softmax(data, size):
-    sum=0.0
-    result = [0 for i in range(size)]
-    for i in range(size):
-        result[i] = math.exp(data[i])
-        sum +=result[i]
-    for i in range(size):
-        result[i] /=sum
-    return result
-
 def app():
     # dataset
     x_data = np.load(DATASET_X_FILENAME)
     y_data = np.load(DATASET_Y_FILENAME)
-    
-    labels = []
-    for y in y_data:
-        if y == 0:
-            labels.append([1, 0])
-        else:
-            labels.append([0, 1])
 
     correct = 0
     wrong = 0
