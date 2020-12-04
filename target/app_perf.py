@@ -62,7 +62,6 @@ def run(in_q):
     else:
         raise ValueError("Image format error.")
     outputSize = outputHeight*outputWidth*outputChannel
-    softmax = np.empty(outputSize)
 
 
     shape_in = (1,) + tuple(
