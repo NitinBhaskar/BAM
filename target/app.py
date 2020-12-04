@@ -101,8 +101,6 @@ def app(model, com_port, t_in_sec):
     # Wait till time_period
     time.sleep(int(t_in_sec))
 
-    # Wait till consumer thread consumes 'Done' message and puts meditation level in common queue    
-    time.sleep(2)
     out = common_q.get() # Read meditation level value
     print('Meditation level was %.2f%%' %(out/int(t_in_sec)*100))
 
