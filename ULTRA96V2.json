@@ -1,0 +1,5 @@
+{
+    "target"   : "DPUCZDX8G",
+    "dcf"      : "/workspace/dpu-03-26-2020-13-30.dcf",
+    "cpu_arch" : "arm64"
+}
